@@ -11,17 +11,16 @@ const PEOPLE = [
 ];
 
 export function ChooseTeam(): React.JSX.Element {
-    //const [allOptions, setAllOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
 
     function chooseMember(newMember: string) {
         if (!team.includes(newMember)) {
-            setTeam((prevTeam) => [...prevTeam, newMember]); // Adds the new member if not already in the team
+            setTeam((prevTeam) => [...prevTeam, newMember]); //Adds the new member if not already in the team
         }
     }
 
     function clearTeam() {
-        setTeam([]); // Resets the team to an empty array
+        setTeam([]); 
     }
 
     return (
